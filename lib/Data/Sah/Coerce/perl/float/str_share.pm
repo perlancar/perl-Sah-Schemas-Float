@@ -9,9 +9,9 @@ use warnings;
 
 sub meta {
     +{
-        v => 2,
+        v => 3,
         enable_by_default => 0,
-        might_die => 1,
+        might_fail => 1,
         prio => 50,
     };
 }
@@ -30,10 +30,10 @@ sub coerce {
 
     $res->{expr_coerce} = join(
         '',
-        '$2 ? ($1 >= 0 && $1 <= 100 ? $1/100 : die "Percentage must be between 0%-100%") :',
-        '$1 >= 0 && $1 <= 1 ? $1 :',
-        '$1 > 1 && $1 <= 100 ? $1/100 : ',
-        'die "Number must be 0 <= x <= 1, or 1 < x <= 100 (as percent)"',
+        '$2 ? ($1 >= 0 && $1 <= 100 ? $1/100 : ["Percentage must be between 0%-100%"] :',
+        '$1 >= 0 && $1 <= 1 ? [undef, $1] :',
+        '$1 > 1 && $1 <= 100 ? [undef, $1/100] : ',
+        '["Number must be 0 <= x <= 1, or 1 < x <= 100 (as percent)"]',
     );
     $res;
 }
