@@ -30,8 +30,8 @@ sub coerce {
 
     $res->{expr_coerce} = join(
         '',
-        '$2 ? ($1 >= 0 && $1 <= 100 ? $1/100 : ["Percentage must be between 0%-100%"] :',
-        '$1 >= 0 && $1 <= 1 ? [undef, $1] :',
+        '$2 ? ($1 >= 0 && $1 <= 100 ? [undef, $1/100] : ["Percentage must be between 0%-100%"]) : ',
+        '$1 >= 0 && $1 <= 1 ? [undef, $1] : ',
         '$1 > 1 && $1 <= 100 ? [undef, $1/100] : ',
         '["Number must be 0 <= x <= 1, or 1 < x <= 100 (as percent)"]',
     );
