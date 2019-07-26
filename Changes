@@ -1,3 +1,8 @@
+0.005   2019-07-26  Released-By: PERLANCAR; Urgency: medium
+
+	- Bump dependency Data::Sah::Coerce to 0.032 [CT].
+
+
 0.004   2019-07-25  Released-By: PERLANCAR; Urgency: medium
 
 	- Update metadata version 3->4.
