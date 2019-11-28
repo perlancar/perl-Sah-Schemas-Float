@@ -19,7 +19,7 @@ to mean "0.01" or "1%") use of this type is discouraged. Use
 
 _
     'x.perl.coerce_rules' => [
-        'str_share',
+        'From_str::share',
     ],
 }, {}];
 

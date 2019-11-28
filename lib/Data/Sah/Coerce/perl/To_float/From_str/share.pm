@@ -1,6 +1,8 @@
-package Data::Sah::Coerce::perl::float::str_share;
+package Data::Sah::Coerce::perl::To_float::From_str::share;
 
+# AUTHOR
 # DATE
+# DIST
 # VERSION
 
 use 5.010001;
@@ -10,6 +12,7 @@ use warnings;
 sub meta {
     +{
         v => 4,
+        summary => 'Coerce float from share string',
         might_fail => 1,
         prio => 50,
     };
@@ -38,7 +41,7 @@ sub coerce {
 }
 
 1;
-# ABSTRACT: Coerce float from share string
+# ABSTRACT:
 
 =for Pod::Coverage ^(meta|coerce)$
 

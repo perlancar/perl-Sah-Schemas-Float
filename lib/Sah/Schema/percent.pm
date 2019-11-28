@@ -13,7 +13,7 @@ percent sign is optional, but the number is always interpreted as percent, e.g.
 
 _
     'x.perl.coerce_rules' => [
-        'str_as_percent',
+        'From_str::as_percent',
     ],
 }, {}];
 

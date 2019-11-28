@@ -1,6 +1,8 @@
-package Data::Sah::Coerce::perl::float::str_as_percent;
+package Data::Sah::Coerce::perl::To_float::From_str::as_percent;
 
+# AUTHOR
 # DATE
+# DIST
 # VERSION
 
 use 5.010001;
@@ -10,6 +12,7 @@ use warnings;
 sub meta {
     +{
         v => 4,
+        summary => 'Interpret number as percent, percent sign optional',
         prio => 50,
     };
 }
@@ -34,8 +37,6 @@ sub coerce {
 }
 
 1;
-# ABSTRACT: Interpret number as percent, percent sign optional
+# ABSTRACT:
 
 =for Pod::Coverage ^(meta|coerce)$
-
-=head1 DESCRIPTION
